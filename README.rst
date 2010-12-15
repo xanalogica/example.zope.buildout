@@ -21,7 +21,7 @@ The following sequence of commands will set up a basic webserver::
  $ python bootstrap.py
  $ bin/buildout
 
-Review the files buildout.cfg and etc/base.cfg for aspects that are
+Review the files *buildout.cfg* and *etc/base.cfg* for aspects that are
 configurable.  Your site can now be brought up using::
 
  $ bin/devinstance fg
@@ -36,13 +36,13 @@ bin/
     Various executable commands are placed in by buildout recipes and any eggs
     that you install.
 
-    The bin/develop command comes from the mr.developer recipe for managing
-    your Git/Subversion checkouts and is used by you often.
+    The **bin/develop** command comes from the *mr.developer* buildout-recipe
+    for managing your Git/Subversion checkouts and is used by you often.
 
-    The bin/test command is for running your unit tests.
+    The **bin/test** command is for running your unit tests.
 
-    The bin/devinstance and bin/instance commands are for bringing up the Zope
-    webserver, in development or production mode respectively.
+    The **bin/devinstance** and **bin/instance** commands are for bringing up
+    the Zope webserver, in development or production mode respectively.
 
 etc/
     Contains reference files included by your buildout.cfg file.
@@ -56,15 +56,15 @@ othereggs/
     upstream.  Not used very often.
 
 parts/
-    Automatically managed by zc.buildout, this directory contains a
+    Automatically managed by *zc.buildout*, this directory contains a
     subdirectory for each part making up your buildout.  One of the most
-    important ones if parts/allsource/ which contains a representation of all
+    important ones is **parts/allsource/** which contains a representation of all
     of the source code that makes up your Zope webserver, both the official
     Zope releases and your customized source.  It combines egg namespaces into
     one directory hierarchy and is very useful for searching the source in a
-    cohesive fashion.
+    coherent fashion.
 
 var/
-    Contains the Data.fs storage file for the ZODB (Zope Object Database).  Be
-    sure to back up this file for safekeeping but otherwise there is nothing
-    under var/ that requires manual adjustment.
+    Contains the *Data.fs* storage file for the ZODB (Zope Object Database).
+    Be sure to back up this file for safekeeping but otherwise there is
+    nothing under var/ that requires manual adjustment.
